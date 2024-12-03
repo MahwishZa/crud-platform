@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-primary: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-secondary: 'Playfair Display', serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  @apply bg-[#EFF1F3] text-[#2A2A2A] font-sans leading-relaxed;
+  font-family: var(--font-primary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-serif text-[#151C2B] font-bold;
+  font-family: var(--font-secondary);
+}
+
+a {
+  @apply text-[#FED766] hover:text-[#009FB7] transition-colors ease-in-out;
+}
+
+blockquote,
+span {
+  @apply italic text-[#FF928B] text-lg;
+  font-family: 'Dancing Script', cursive;
+}
+
+button,
+.btn-primary,
+.btn-secondary {
+  @apply text-[#151C2B] hover:text-[#EFF1F3] transition-colors ease-in-out;
+}
+
+.btn-primary {
+  @apply bg-[#FED766] font-bold rounded shadow-md hover:shadow-lg;
+}
+
+.btn-secondary {
+  @apply bg-[#FF928B] font-bold rounded shadow-md hover:shadow-lg;
+}
+
+.hover-link {
+  @apply font-medium text-[#151C2B] hover:text-[#009FB7] hover:underline transition-transform transform hover:scale-105 duration-300
+}
+
+.hover-submit {
+  @apply bg-blue-800 text-white hover:text-[#EFF1F3] hover:bg-blue-700 transition duration-300;
+}
+
+.hover-underline {
+  @apply text-blue-600 hover:text-blue-700 hover:underline transition duration-300
+}
+
+.image-heading {
+  @apply text-5xl text-[#FF928B] font-bold mb-4 relative
+}
+
+.form-textarea {
+  @apply w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-1 focus:ring-gray-400
+}
+
+.form-label {
+  @apply block text-sm font-medium text-[#151C2B] mb-1
+}
+
+.user-logo {
+  @apply w-12 h-12 bg-[#FF928B] rounded-full flex items-center justify-center text-[#EFF1F3] font-bold
+}
