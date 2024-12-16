@@ -14,12 +14,12 @@ This is a blogging platform website built using the MERN stack (MongoDB, Express
 
 **Technologies Used**
 
-**MongoDB:** NoSQL database for storing user data, posts, and comments.
+1. **MongoDB:** NoSQL database for storing user data, posts, and comments.
 
-**Express.js:** Web application framework for Node.js, handling server-side logic.
+2. **Express.js:** Web application framework for Node.js, handling server-side logic.
 
-**React:** Front-end library for building interactive user interfaces.
+3. **React:** Front-end library for building interactive user interfaces.
 
-**Node.js:** JavaScript runtime for executing server-side code.
+4. **Node.js:** JavaScript runtime for executing server-side code.
 
-**JWT (JSON Web Tokens):** For user authentication and session management.
+5. **JWT (JSON Web Tokens):** For user authentication and session management.
