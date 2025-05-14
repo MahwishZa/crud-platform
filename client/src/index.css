@@ -36,7 +36,7 @@ a {
 
 blockquote,
 span {
-  @apply italic text-[#FF928B] text-lg;
+  @apply italic text-[#3FA9F5] text-lg;
   font-family: 'Dancing Script', cursive;
 }
 
@@ -51,7 +51,7 @@ button,
 }
 
 .btn-secondary {
-  @apply bg-[#FF928B] font-bold rounded shadow-md hover:shadow-lg;
+  @apply bg-[#3FA9F5] font-bold rounded shadow-md hover:shadow-lg;
 }
 
 .hover-link {
@@ -67,7 +67,7 @@ button,
 }
 
 .image-heading {
-  @apply text-5xl text-[#FF928B] font-bold mb-4 relative
+  @apply text-5xl text-[#FED766] font-bold mb-4 relative
 }
 
 .form-textarea {
@@ -79,5 +79,5 @@ button,
 }
 
 .user-logo {
-  @apply w-12 h-12 bg-[#FF928B] rounded-full flex items-center justify-center text-[#EFF1F3] font-bold
+  @apply w-12 h-12 bg-[#3FA9F5] rounded-full flex items-center justify-center text-[#EFF1F3] font-bold
 }
