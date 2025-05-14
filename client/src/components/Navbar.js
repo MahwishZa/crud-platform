@@ -88,7 +88,7 @@ function Navbar() {
   return (
     <nav className="bg-white shadow-md fixed w-full z-10">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <h1 className="text-2xl font-bold">Art Expressions</h1>
+        <h1 className="text-2xl font-bold">DevLog</h1>
 
         {/* Hamburger Menu */}
         <button
