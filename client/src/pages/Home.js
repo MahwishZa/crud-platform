@@ -5,7 +5,6 @@ import img from "../assets/img.jpeg";
 import Blog_Card from "../components/Blog_Card";
 
 const Home = () => {
-
   const [blogs, setBlogs] = useState([]);
 
   const getAllBlogs = async () => {
@@ -27,7 +26,11 @@ const Home = () => {
     <div id="blog" className="py-16">
       <motion.div
         className="container rounded mx-auto p-6 text-center text-white h-screen flex flex-col justify-center items-center relative"
-        style={{ backgroundImage: `url(${img})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+        style={{
+          backgroundImage: `url(${img})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
@@ -39,8 +42,9 @@ const Home = () => {
             transition: { duration: 0.3 },
           }}
           whileTap={{ scale: 0.95 }}
-          className="image-heading">
-          Unleashing Creativity Through Art: A Community of Expression
+          className="image-heading"
+        >
+          Connecting Developers Through Code
         </motion.h1>
         <motion.span
           whileHover={{
@@ -48,8 +52,9 @@ const Home = () => {
             transition: { duration: 0.3 },
           }}
           whileTap={{ scale: 0.95 }}
-          className="text-bold text-white relative">
-          Showcase your artistic vision, connect with like-minded creators, and discover inspiring stories that bring the art world to life
+          className="text-bold text-white relative"
+        >
+          Share your tech journey, explore full-stack tutorials, and dive into real-world engineering stories from developers around the globe.
         </motion.span>
       </motion.div>
       <div id="all-blogs" className="container mx-auto px-4 py-6">
@@ -64,20 +69,27 @@ const Home = () => {
         <div className="grid grid-cols-1 gap-8">
           {blogs &&
             blogs.map((blog) => (
-              <Blog_Card
-                id={blog?._id}
-                isUser={localStorage.getItem("userId") === blog?.user?._id}
-                title={blog?.title}
-                description={blog?.description}
-                image={blog?.image}
-                username={blog?.user?.username}
-                time={blog.createdAt}
-              />
+              <motion.div
+                key={blog?._id}
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <Blog_Card
+                  id={blog?._id}
+                  isUser={localStorage.getItem("userId") === blog?.user?._id}
+                  title={blog?.title}
+                  description={blog?.description}
+                  image={blog?.image}
+                  username={blog?.user?.username}
+                  time={blog.createdAt}
+                />
+              </motion.div>
             ))}
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
