@@ -1,4 +1,4 @@
-import { FaFacebookF, FaInstagram, FaPinterestP, FaTwitter } from "react-icons/fa";
+import { FaDev, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
     return (
@@ -10,16 +10,16 @@ const Footer = () => {
 
                     {/* Left Section */}
                     <div className="flex flex-col space-y-6">
-                        <h2 className="text-xl text-white font-bold">Art Expressions</h2>
+                        <h2 className="text-xl text-white font-bold">DevLog</h2>
                         <p className="text-gray-400 text-sm leading-relaxed">
-                            Join our creative space where illustrators, designers, and artists share their insights. Discover tutorials, inspiration, and discussions on all things art.
+                            DevLog is a space where developers, engineers, and tech enthusiasts share technical insights, tutorials, and deep dives into real-world problems and solutions across the full stack.
                         </p>
                         <div className="flex space-x-4">
                             {[
-                                { Icon: FaFacebookF, link: "#" },
-                                { Icon: FaInstagram, link: "#" },
+                                { Icon: FaDev, link: "#" },
+                                { Icon: FaGithub, link: "#" },
+                                { Icon: FaLinkedin, link: "#" },
                                 { Icon: FaTwitter, link: "#" },
-                                { Icon: FaPinterestP, link: "#" },
                             ].map(({ Icon, link }, idx) => (
                                 <a key={idx} href={link} className="text-gray-400 hover:text-white transition-transform transform hover:scale-110">
                                     <Icon size={20} />
@@ -32,7 +32,7 @@ const Footer = () => {
                     <div>
                         <h3 className="text-xl text-white font-semibold mb-4">Categories</h3>
                         <ul className="space-y-3">
-                            {["Community and Culture", "Events and Exhibitions", "History and Inspiration", "Artist Spotlight", "Tips and Tutorials"].map((category, idx) => (
+                            {["JavaScript & Node.js", "Frontend & React", "DevOps & Deployment", "Career & Industry Tips", "Backend & APIs"].map((category, idx) => (
                                 <li key={idx}>
                                     <p className="text-gray-400 text-sm hover:text-white hover:underline transition-colors">
                                         {category}
@@ -46,7 +46,7 @@ const Footer = () => {
                     <div>
                         <h3 className="text-xl text-white font-semibold mb-4">Subscribe to Our Newsletter</h3>
                         <p className="text-gray-400 text-sm mb-4">
-                            Stay updated with the latest articles, tips, and events from Art Expressions!
+                            Stay updated with technical deep dives, industry trends, and coding tutorials directly in your inbox.
                         </p>
                         <form className="flex items-center space-x-2">
                             <input
@@ -67,7 +67,7 @@ const Footer = () => {
                 {/* Footer Bottom Section */}
                 <div className="mt-10 border-t border-gray-700 pt-6 flex flex-col md:flex-row items-center justify-center">
                     <p className="text-gray-400 text-sm">
-                        © 2024 Art Expressions. All rights reserved. Licensing.
+                        © 2024 DevLog. All rights reserved.
                     </p>
                 </div>
             </div>
