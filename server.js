@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+const path = require("path");
 const morgan = require("morgan");
 const dotenv = require("dotenv");
 const connectDB = require("./config/db");
@@ -8,7 +9,6 @@ const blogRoutes = require("./routes/blog_routes");
 const commentRoutes = require("./routes/comment_routes")
 
 dotenv.config();
-
 connectDB();
 const app = express();
 
