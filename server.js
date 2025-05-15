@@ -1,18 +1,15 @@
-// server.js
-
-require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const morgan = require("morgan");
-const path = require("path");
+const dotenv = require("dotenv");
 const connectDB = require("./config/db");
+const userRoutes = require("./routes/user_routes");
+const blogRoutes = require("./routes/blog_routes");
+const commentRoutes = require("./routes/comment_routes")
 
-const userRoutes    = require("./routes/user_routes");
-const blogRoutes    = require("./routes/blog_routes");
-const commentRoutes = require("./routes/comment_routes");
+dotenv.config();
 
 connectDB();
-
 const app = express();
 
 // JSON + logging + CORS
@@ -21,9 +18,9 @@ app.use(express.json());
 app.use(morgan("dev"));
 
 // API routes
-app.use("/api/v1/user",    userRoutes);
+app.use("/api/v1/user", userRoutes);
 app.use("/api/v1/comment", commentRoutes);
-app.use("/api/v1/blog",    blogRoutes);
+app.use("/api/v1/blog", blogRoutes);
 
 // Serve React build in production
 if (process.env.NODE_ENV === "production") {
