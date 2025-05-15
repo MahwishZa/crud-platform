@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, useLocation, matchPath } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Create from "./pages/Blog_Posts/Create";
 import Edit from "./pages/Comments/Edit"
 import Footer from './components/Footer';
@@ -13,8 +13,7 @@ import { Toaster } from "react-hot-toast";
 
 const App = () => {
   const location = useLocation();
-  const noFooterRoutes = ["/login", "/register", "/create-blog", "/blog-details/:id", "/create-comment", "/update-comment/:id"].some((path) => matchPath(
-    { path, end: true }, location.pathname));
+  const noFooterRoutes = ["/login", "/register", "/create-blog", "/blog-details/:id", "/create-comment", "/update-comment/:id"];
   const noNavbarRoutes = ["/login", "/register"]
 
   return (
