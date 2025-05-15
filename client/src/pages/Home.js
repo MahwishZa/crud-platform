@@ -27,6 +27,9 @@ const Home = () => {
       <motion.div
         className="container rounded mx-auto p-6 text-center text-white h-screen flex flex-col justify-center items-center relative"
         style={{
+          width: '90%',
+          maxWidth: '1200px',
+          height: '600px',
           backgroundImage: `url(${img})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
@@ -38,23 +41,21 @@ const Home = () => {
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <motion.h1
           whileHover={{
-            scale: 1.1,
-            transition: { duration: 0.3 },
+            scale: 1.05,
+            transition: { duration: 0.2, ease: 'easeOut' },
           }}
-          whileTap={{ scale: 0.95 }}
+          whileTap={{ scale: 0.98 }}
           className="image-heading"
         >
           Connecting Developers Through Code
         </motion.h1>
         <motion.span
-          whileHover={{
-            scale: 1.1,
-            transition: { duration: 0.3 },
-          }}
-          whileTap={{ scale: 0.95 }}
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: 'easeOut', delay: 0.2 }}
           className="text-bold text-white relative"
         >
-          Share your tech journey, explore full-stack tutorials, and dive into real-world engineering stories from developers around the globe.
+          Share your tech journey, explore full-stack tutorials, and dive into real-world engineering stories from developers around the globe
         </motion.span>
       </motion.div>
       <div id="all-blogs" className="container mx-auto px-4 py-6">
