@@ -4,7 +4,6 @@ import BlogCard from "../components/Blog_Card";
 
 const User = () => {
   const [blogs, setBlogs] = useState([]);
-
   const getUserBlogs = async () => {
     try {
       const id = localStorage.getItem("userId");
@@ -16,7 +15,6 @@ const User = () => {
       console.log(error);
     }
   };
-
   useEffect(() => {
     getUserBlogs();
   }, []);
